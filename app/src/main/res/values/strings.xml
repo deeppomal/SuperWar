@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Superhero</string>
+    <string name="title_home">Battlefield</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="web_client_id">YOUR WEB CLIENT ID</string>
+
+    <string name="q1">How to play the game?</string>
+    <string name="a1">There are multiple fights erupting among super-heroes and super-villains. Pick the one you want to bet on
+    and see if you can win.</string>
+
+    <string name="q2">How to win?</string>
+    <string name="a2">Powerstats are given for both the fighters. Based on that make a judgement and pick your fighter.
+     If the overall stats of your fighter are better than the opponent , you will win</string>
+
+    <string name="q3">How to earn the virtual money?</string>
+    <string name="a3">You start with $100, on winning $10 will be added to your balance and on losing $5 will be deducted from your balance</string>
+
+    <string name="q4">How to load new fights</string>
+    <string name="a4">Pull to refresh the home page to load new fights</string>
+
+    <string name="q5">Contact the developer</string>
+    <string name="a5">Mail deeppomal98@gmail.com to give feedback on the app</string>
+</resources>

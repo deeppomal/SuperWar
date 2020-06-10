@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="26dp"
+            android:id="@+id/profile"
+            android:elevation="16dp"
+            android:layout_margin="16dp"
+            android:layout_centerHorizontal="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/fg1"
+                android:padding="9dp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileName"
+                    android:layout_toEndOf="@+id/profileImage"
+                    android:layout_marginStart="16dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    android:maxLines="1" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/profileBalance"
+                    android:layout_below="@+id/profileName"
+                    android:layout_toEndOf="@+id/profileImage"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:maxLines="1" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.app.adprogressbarlib.AdCircleProgress
+            android:id="@+id/pgb_progress2"
+            android:layout_width="60dp"
+            android:layout_margin="20dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:backgroundTintMode="add"
+            app:adpgb_finished_color="@color/white"
+            app:adpgb_background_color="@android:color/transparent"
+            app:adpgb_unfinished_color="@color/colorPrimary"
+            custom:adpgb_finished_stroke_width="6dp"
+            custom:adpgb_show_text="false"
+            custom:adpgb_unfinished_stroke_width="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/loadingText"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:layout_below="@+id/pgb_progress2"
+            android:textAlignment="center"
+            android:text="Generating fights, please wait..."/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recyclerView1"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/profile"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="50dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/fg1"
+            android:gravity="center">
+            <Button
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/info"
+                android:background="@drawable/ic_info_outline_black_24dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
